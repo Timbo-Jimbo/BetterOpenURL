@@ -15,11 +15,6 @@
         </option>
         <option name="resolveExternalAnnotations" value="false" />
       </GradleProjectSettings>
-      <GradleProjectSettings>
-        <option name="externalProjectPath" value="$PROJECT_DIR$/BetterOpenURL" />
-        <option name="gradleJvm" value="#GRADLE_LOCAL_JAVA_HOME" />
-        <option name="resolveExternalAnnotations" value="false" />
-      </GradleProjectSettings>
     </option>
   </component>
 </project>

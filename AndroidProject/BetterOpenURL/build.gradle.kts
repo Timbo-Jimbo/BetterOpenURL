@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.timbojimbo.betteropenurl"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         minSdk = 24
@@ -17,6 +17,7 @@ android {
 
     buildTypes {
         release {
+            isDefault = true
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),

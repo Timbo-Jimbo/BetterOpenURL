@@ -1,0 +1,22 @@
+# Ignore everything
+/*
+/*/
+
+# Inverse ignore some stuff
+!/Assets/
+!/ProjectSettings/
+!/Packages/
+!.gitignore
+!.gitattributes
+
+# OS Stuff
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+.swatches
+ehthumbs.db
+Thumbs.db
+$RECYCLE.BIN/
+Desktop.ini
+*Thumbs.db.meta

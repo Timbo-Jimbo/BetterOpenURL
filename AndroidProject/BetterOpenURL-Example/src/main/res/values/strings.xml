@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">BetterOpenURL-Example</string>
+    <string name="launch_button">Launch Custom Tab</string>
+</resources>

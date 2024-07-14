@@ -1,0 +1,16 @@
+{
+  "name": "com.timbojimbo.betteropenurl",
+  "displayName": "Better Open URL",
+  "version": "0.1.0",
+  "unity": "2021.3",
+  "description": "Provides a nicer way to open URLs in your mobile applications. On iOS it uses `SFSafariViewController` and on Android it uses `Chrome Custom Tabs`. For other platforms it falls back to the default `Application.OpenURL`.",
+  "keywords": [
+    "unity",
+    "url",
+    "open",
+    "safari",
+    "chrome",
+    "custom",
+    "tabs"
+  ]
+}

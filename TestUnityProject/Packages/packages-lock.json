@@ -1,5 +1,11 @@
 {
   "dependencies": {
+    "com.google.external-dependency-manager": {
+      "version": "file:com.google.external-dependency-manager-1.2.179.tgz",
+      "depth": 0,
+      "source": "local-tarball",
+      "dependencies": {}
+    },
     "com.timbojimbo.betteropenurl": {
       "version": "file:../../Package/com.timbojimbo.betteropenurl",
       "depth": 0,

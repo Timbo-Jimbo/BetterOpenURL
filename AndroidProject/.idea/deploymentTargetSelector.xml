@@ -4,10 +4,10 @@
     <selectionStates>
       <SelectionState runConfigName="BetterOpenURL-Example">
         <option name="selectionMode" value="DROPDOWN" />
-        <DropdownSelection timestamp="2024-07-14T09:42:33.594172400Z">
+        <DropdownSelection timestamp="2024-07-15T07:03:16.879082Z">
           <Target type="DEFAULT_BOOT">
             <handle>
-              <DeviceId pluginId="LocalEmulator" identifier="path=C:\Users\Timur\.android\avd\Pixel_Fold_API_35.avd" />
+              <DeviceId pluginId="LocalEmulator" identifier="path=/Users/timbojimbo/.android/avd/Pixel_Fold_API_35.avd" />
             </handle>
           </Target>
         </DropdownSelection>

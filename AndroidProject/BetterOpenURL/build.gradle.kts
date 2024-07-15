@@ -5,14 +5,11 @@ plugins {
 
 android {
     namespace = "com.timbojimbo.betteropenurl"
-    compileSdk = 35
+    compileSdk = 34
 
     defaultConfig {
-        minSdk = 24
-
+        minSdk = 22
         consumerProguardFiles("consumer-rules.pro")
-
-
     }
 
     buildTypes {
@@ -58,5 +55,5 @@ dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
-    implementation(libs.androidx.browser)
+    implementation(libs.androidx.browser.v160)
 }

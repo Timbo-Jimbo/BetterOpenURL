@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "com.timbojimbo.betteropenurl": "file:../../Package/com.timbojimbo.betteropenurl",
+    "com.google.external-dependency-manager": "file:com.google.external-dependency-manager-1.2.179.tgz",
     "com.unity.collab-proxy": "2.0.5",
     "com.unity.feature.development": "1.0.1",
     "com.unity.ide.rider": "3.0.31",

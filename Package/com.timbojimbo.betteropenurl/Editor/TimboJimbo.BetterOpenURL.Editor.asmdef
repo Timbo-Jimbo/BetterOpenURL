@@ -1,7 +1,9 @@
 {
     "name": "TimboJimbo.BetterOpenURL.Editor",
-    "rootNamespace": "",
-    "references": [],
+    "rootNamespace": "TimboJimbo.BetterOpenURL.Editor",
+    "references": [
+        "GUID:74042b58c802ffb40967caab5af920ba"
+    ],
     "includePlatforms": [
         "Editor"
     ],

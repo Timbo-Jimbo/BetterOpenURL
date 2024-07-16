@@ -1,6 +1,6 @@
 {
     "name": "TimboJimbo.BetterOpenURL",
-    "rootNamespace": "",
+    "rootNamespace": "TimboJimbo.BetterOpenURL",
     "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],

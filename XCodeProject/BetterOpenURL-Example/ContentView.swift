@@ -94,7 +94,7 @@ struct ContentView: View {
                         customColor: true,
                         barTintColor: UIColor(barTintColor),
                         modalTransitionStyle: selectedTransitionStyle,
-                        modelPresentationStyle: selectedPresentationStyle,
+                        modalPresentationStyle: selectedPresentationStyle,
                         dismissButtonStyle: selectedDismissButtonStyle
                     )
                 }, label: {

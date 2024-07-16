@@ -1,6 +1,6 @@
 namespace TimboJimbo.BetterOpenURL.Android
 {
-    public enum AndroidApplicationAnimation 
+    public enum AndroidApplicationAnimation : int
     {
         FallAway,
         FlyAway,

@@ -1,6 +1,6 @@
 namespace TimboJimbo.BetterOpenURL.Android
 {
-    public enum AndroidCustomTabAnimations 
+    public enum AndroidCustomTabAnimations : int
     {
         PullIn,
         FallIn,

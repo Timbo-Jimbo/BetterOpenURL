@@ -1,6 +1,6 @@
 package com.timbojimbo.betteropenurl
 
-enum class CustomTabAnimations
+enum class CustomTabAnimation
 {
     pullIn,
     fallIn,

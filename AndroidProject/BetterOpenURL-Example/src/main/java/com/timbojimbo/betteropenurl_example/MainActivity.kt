@@ -1,7 +1,6 @@
 package com.timbojimbo.betteropenurl_example
 
 import android.os.Bundle
-import android.widget.AdapterView.OnItemSelectedListener
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.Spinner
@@ -11,7 +10,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.timbojimbo.betteropenurl.ApplicationAnimation
 import com.timbojimbo.betteropenurl.BetterOpenURL
-import com.timbojimbo.betteropenurl.CustomTabAnimations
+import com.timbojimbo.betteropenurl.CustomTabAnimation
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,10 +28,10 @@ class MainActivity : AppCompatActivity() {
         applicationAnimationSpinner.adapter = applicationAnimAdaptor;
         applicationAnimationSpinner.setSelection(ApplicationAnimation.entries.indexOf(ApplicationAnimation.fallAway));
 
-        val customTabAnimAdaptor = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, CustomTabAnimations.entries);
+        val customTabAnimAdaptor = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, CustomTabAnimation.entries);
         val customTabsAnimSpinner = this.findViewById<Spinner>(R.id.custom_tab_anim);
         customTabsAnimSpinner.adapter = customTabAnimAdaptor;
-        customTabsAnimSpinner.setSelection(CustomTabAnimations.entries.indexOf(CustomTabAnimations.openFromBottom));
+        customTabsAnimSpinner.setSelection(CustomTabAnimation.entries.indexOf(CustomTabAnimation.openFromBottom));
 
         val launchButton = this.findViewById<Button>(R.id.launch)
         launchButton.setOnClickListener {
@@ -40,7 +39,7 @@ class MainActivity : AppCompatActivity() {
                 this,
                 "https://google.com",
                 applicationAnim = applicationAnimationSpinner.selectedItem as ApplicationAnimation,
-                customTabAnim = customTabsAnimSpinner.selectedItem as CustomTabAnimations
+                customTabAnim = customTabsAnimSpinner.selectedItem as CustomTabAnimation
             )
         }
 

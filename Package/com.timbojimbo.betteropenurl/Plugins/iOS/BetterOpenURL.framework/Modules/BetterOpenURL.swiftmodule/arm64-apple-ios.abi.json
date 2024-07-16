@@ -1,0 +1,260 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BetterOpenURL",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SafariServices",
+        "printedName": "SafariServices",
+        "declKind": "Import",
+        "moduleName": "BetterOpenURL"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "BetterOpenURL"
+      },
+      {
+        "kind": "Function",
+        "name": "BetterOpenURL_supportsSafariView",
+        "printedName": "BetterOpenURL_supportsSafariView()",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "Bool",
+            "printedName": "Swift.Bool",
+            "usr": "s:Sb"
+          }
+        ],
+        "declKind": "Func",
+        "usr": "c:(cm)BetterOpenURL_supportsSafariView",
+        "mangledName": "$s13BetterOpenURL0abC19_supportsSafariViewSbyF",
+        "moduleName": "BetterOpenURL",
+        "declAttributes": [
+          "AccessControl",
+          "CDecl"
+        ],
+        "funcSelfKind": "NonMutating"
+      },
+      {
+        "kind": "Function",
+        "name": "BetterOpenURL_openSafariView",
+        "printedName": "BetterOpenURL_openSafariView(url:customColor:barTintColorHex:modalTransitionStyle:modalPresentationStyle:barCollapsingEnabled:dismissButtonStyle:)",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "Void",
+            "printedName": "()"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "UnsafePointer",
+            "printedName": "Swift.UnsafePointer<Swift.Int8>",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int8",
+                "printedName": "Swift.Int8",
+                "usr": "s:s4Int8V"
+              }
+            ],
+            "usr": "s:SP"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "Bool",
+            "printedName": "Swift.Bool",
+            "usr": "s:Sb"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "UnsafePointer",
+            "printedName": "Swift.UnsafePointer<Swift.Int8>",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int8",
+                "printedName": "Swift.Int8",
+                "usr": "s:s4Int8V"
+              }
+            ],
+            "usr": "s:SP"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "Int",
+            "printedName": "Swift.Int",
+            "usr": "s:Si"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "Int",
+            "printedName": "Swift.Int",
+            "usr": "s:Si"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "Bool",
+            "printedName": "Swift.Bool",
+            "usr": "s:Sb"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "Int",
+            "printedName": "Swift.Int",
+            "usr": "s:Si"
+          }
+        ],
+        "declKind": "Func",
+        "usr": "c:(cm)BetterOpenURL_openSafariViewWithUrl:customColor:barTintColorHex:modalTransitionStyle:modalPresentationStyle:barCollapsingEnabled:dismissButtonStyle:",
+        "mangledName": "$s13BetterOpenURL0abC15_openSafariView3url11customColor07barTintI3Hex20modalTransitionStyle0m12PresentationO00J17CollapsingEnabled013dismissButtonO0ySPys4Int8VG_SbALS2iSbSitF",
+        "moduleName": "BetterOpenURL",
+        "declAttributes": [
+          "AccessControl",
+          "CDecl"
+        ],
+        "funcSelfKind": "NonMutating"
+      },
+      {
+        "kind": "Import",
+        "name": "SafariServices",
+        "printedName": "SafariServices",
+        "declKind": "Import",
+        "moduleName": "BetterOpenURL",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Function",
+        "name": "supportsSafariView",
+        "printedName": "supportsSafariView()",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "Bool",
+            "printedName": "Swift.Bool",
+            "usr": "s:Sb"
+          }
+        ],
+        "declKind": "Func",
+        "usr": "s:13BetterOpenURL18supportsSafariViewSbyF",
+        "mangledName": "$s13BetterOpenURL18supportsSafariViewSbyF",
+        "moduleName": "BetterOpenURL",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "funcSelfKind": "NonMutating"
+      },
+      {
+        "kind": "Function",
+        "name": "openSafariView",
+        "printedName": "openSafariView(url:customColor:barTintColor:modalTransitionStyle:modalPresentationStyle:barCollapsingEnabled:dismissButtonStyle:)",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "Void",
+            "printedName": "()"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "String",
+            "printedName": "Swift.String",
+            "usr": "s:SS"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "Bool",
+            "printedName": "Swift.Bool",
+            "hasDefaultArg": true,
+            "usr": "s:Sb"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "UIColor",
+            "printedName": "UIKit.UIColor",
+            "hasDefaultArg": true,
+            "usr": "c:objc(cs)UIColor"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "UIModalTransitionStyle",
+            "printedName": "UIKit.UIModalTransitionStyle",
+            "hasDefaultArg": true,
+            "usr": "c:@E@UIModalTransitionStyle"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "UIModalPresentationStyle",
+            "printedName": "UIKit.UIModalPresentationStyle",
+            "hasDefaultArg": true,
+            "usr": "c:@E@UIModalPresentationStyle"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "Bool",
+            "printedName": "Swift.Bool",
+            "hasDefaultArg": true,
+            "usr": "s:Sb"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "DismissButtonStyle",
+            "printedName": "SafariServices.SFSafariViewController.DismissButtonStyle",
+            "hasDefaultArg": true,
+            "usr": "c:@E@SFSafariViewControllerDismissButtonStyle"
+          }
+        ],
+        "declKind": "Func",
+        "usr": "s:13BetterOpenURL14openSafariView3url11customColor07barTintI020modalTransitionStyle0l12PresentationN00J17CollapsingEnabled013dismissButtonN0ySS_SbSo7UIColorCSo07UIModalmN0VSo0uoN0VSbSo08SFSafarif17ControllerDismisssN0VtF",
+        "mangledName": "$s13BetterOpenURL14openSafariView3url11customColor07barTintI020modalTransitionStyle0l12PresentationN00J17CollapsingEnabled013dismissButtonN0ySS_SbSo7UIColorCSo07UIModalmN0VSo0uoN0VSbSo08SFSafarif17ControllerDismisssN0VtF",
+        "moduleName": "BetterOpenURL",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "funcSelfKind": "NonMutating"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "BetterOpenURL",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/timbojimbo\/BetterOpenURL\/XCodeProject\/BetterOpenURL\/BetterOpenURL.swift",
+      "kind": "BooleanLiteral",
+      "offset": 278,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/timbojimbo\/BetterOpenURL\/XCodeProject\/BetterOpenURL\/BetterOpenURL.swift",
+      "kind": "BooleanLiteral",
+      "offset": 492,
+      "length": 4,
+      "value": "true"
+    }
+  ]
+}

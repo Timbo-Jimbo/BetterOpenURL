@@ -9,12 +9,12 @@ internal class CustomTabAnimSets
         val fallIn = AnimSet(R.anim.push_from_front, R.anim.pull_to_front)
         val openFromBottom = AnimSet(R.anim.open_from_bottom, R.anim.close_to_bottom)
 
-        fun get(enumVal: CustomTabAnimations) : AnimSet
+        fun get(enumVal: CustomTabAnimation) : AnimSet
         {
             return when (enumVal) {
-                CustomTabAnimations.pullIn -> pullIn
-                CustomTabAnimations.fallIn -> fallIn
-                CustomTabAnimations.openFromBottom -> openFromBottom
+                CustomTabAnimation.pullIn -> pullIn
+                CustomTabAnimation.fallIn -> fallIn
+                CustomTabAnimation.openFromBottom -> openFromBottom
             }
         }
     }

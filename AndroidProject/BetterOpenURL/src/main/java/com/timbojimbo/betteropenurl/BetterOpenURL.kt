@@ -1,6 +1,5 @@
 package com.timbojimbo.betteropenurl
 
-import android.app.Activity
 import android.content.Context
 import android.graphics.Color
 import android.net.Uri
@@ -14,7 +13,7 @@ class BetterOpenURL {
     companion object {
 
         @JvmStatic
-        fun openInCustomTab(context: Context, urlToLaunch: String, customColors: Boolean = false, toolbarColorHex: String = "", secondaryToolbarColorHex: String = "", showTitle: Boolean = true, urlBarHidingEnabled: Boolean = true, customAnimations: Boolean = true, applicationAnim: ApplicationAnimation = ApplicationAnimation.fallAway, customTabAnim: CustomTabAnimations = CustomTabAnimations.openFromBottom) {
+        fun openInCustomTab(context: Context, urlToLaunch: String, customColors: Boolean = false, toolbarColorHex: String = "", secondaryToolbarColorHex: String = "", showTitle: Boolean = true, urlBarHidingEnabled: Boolean = true, customAnimations: Boolean = true, applicationAnim: ApplicationAnimation = ApplicationAnimation.fallAway, customTabAnim: CustomTabAnimation = CustomTabAnimation.openFromBottom) {
 
             if(!hasCustomTabsSupport(context))
             {
@@ -75,7 +74,7 @@ class BetterOpenURL {
 
         @JvmStatic
         fun testLog() {
-            println("This is a test..!");
+            println("This is a test...!!!");
         }
     }
 }

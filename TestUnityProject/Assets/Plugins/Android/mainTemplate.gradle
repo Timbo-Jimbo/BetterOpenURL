@@ -16,15 +16,16 @@ apply plugin: 'com.android.library'
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 // Android Resolver Dependencies Start
-    implementation 'androidx.browser:browser:1.6.0' // Packages/com.timbojimbo.betteropenurl/Editor/BetterOpenURLDependencies.xml:3
+    implementation 'androidx.browser:browser:1.6.0' // Packages/com.timbojimbo.betteropenurl/Editor/Android/BetterOpenURLDependencies.xml:3
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.9.0' // Packages/com.timbojimbo.betteropenurl/Editor/Android/BetterOpenURLDependencies.xml:4
 // Android Resolver Dependencies End
 **DEPS**}
 
 // Android Resolver Exclusions Start
 android {
   packagingOptions {
-      exclude ('/lib/arm64-v8a/*' + '*')
       exclude ('/lib/armeabi/*' + '*')
+      exclude ('/lib/armeabi-v7a/*' + '*')
       exclude ('/lib/mips/*' + '*')
       exclude ('/lib/mips64/*' + '*')
       exclude ('/lib/x86/*' + '*')

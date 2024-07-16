@@ -10,7 +10,9 @@
       "version": "file:../../Package/com.timbojimbo.betteropenurl",
       "depth": 0,
       "source": "local",
-      "dependencies": {}
+      "dependencies": {
+        "com.google.external-dependency-manager": "1.2.179"
+      }
     },
     "com.unity.collab-proxy": {
       "version": "2.0.5",

@@ -1,5 +1,7 @@
 using System;
+using System.Reflection;
 using TimboJimbo.BetterOpenURL.Android;
+using TimboJimbo.BetterOpenURL.Auth;
 using TimboJimbo.BetterOpenURL.iOS;
 using UnityEngine;
 
@@ -11,7 +13,9 @@ namespace TimboJimbo.BetterOpenURL
         public AndroidSettings AndroidSettings = new ();
         public iOSSettings iOSSettings = new ();
         public bool Logging = true;
-
+        
+        private static MethodInfo _invokeDeepLinkActivatedMethod;
+        
         public void Open(string url)
         {
             Log($"Opening URL: {url}");
@@ -55,6 +59,38 @@ namespace TimboJimbo.BetterOpenURL
             {
                 Log("Platform neither Android nor iOS, falling back to default behavior");
                 Application.OpenURL(url);
+            }
+        }
+        
+        public void StartAuthentication(string url)
+        {
+            #if UNITY_IOS
+            if (!Application.isEditor && (Application.platform == RuntimePlatform.IPhonePlayer || Application.platform == RuntimePlatform.OSXPlayer))
+            {
+                Log("Starting authentication on iOS");
+                iOSBindings.StartAuthentication(url, iOSSettings.AuthSchema, (result, resultUrl) =>
+                {
+                    Log($"Authentication result: {result}, URL: {resultUrl}");
+                    if (result == AuthURLResult.Completed)
+                    {
+                        //Emulate Deeplink being activated by auth completion
+                        if (_invokeDeepLinkActivatedMethod == null)
+                        {
+                            var type = typeof(Application);
+                            _invokeDeepLinkActivatedMethod = type.GetMethod("InvokeDeepLinkActivated", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Static);
+                        }
+
+                        if (_invokeDeepLinkActivatedMethod != null)
+                        {
+                            _invokeDeepLinkActivatedMethod.Invoke(null, new object[] { resultUrl });
+                        }
+                    }
+                });
+            }
+            else
+            #endif
+            {
+                Open(url);
             }
         }
 

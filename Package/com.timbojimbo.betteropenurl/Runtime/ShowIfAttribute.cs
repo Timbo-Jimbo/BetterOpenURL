@@ -9,6 +9,7 @@ namespace TimboJimbo.BetterOpenURL
         public ShowIfAttribute(string conditionalSourceField)
         {
             ConditionalSourceField = conditionalSourceField;
+            order = -10;
         }
     }
 }

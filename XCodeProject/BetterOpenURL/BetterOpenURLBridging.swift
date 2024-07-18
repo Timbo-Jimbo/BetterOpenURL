@@ -9,7 +9,6 @@ import Foundation
 import SafariServices
 import UIKit
 
-
 @_cdecl("BetterOpenURL_supportsSafariView")
 public func BetterOpenURL_supportsSafariView() -> Bool
 {
@@ -36,4 +35,21 @@ public func BetterOpenURL_openSafariView(
         barCollapsingEnabled: barCollapsingEnabled,
         dismissButtonStyle: SFSafariViewController.DismissButtonStyle(rawValue: dismissButtonStyle) ?? .done
     )
+}
+
+@_cdecl("BetterOpenURL_startAuthentication")
+public func BetterOpenURL_startAuthentication(
+    url: UnsafePointer<CChar>,
+    callbackUrlSchema: UnsafePointer<CChar>,
+    handler: @convention(c) @escaping (Int, UnsafePointer<CChar>)-> Void
+)
+{
+    let urlString = String(cString: url);
+    startAuthentication(url: urlString, callbackUrlSchema: String(cString: callbackUrlSchema))
+    { authViewResult, resultURL in
+        
+        print("startAuthentication completed " + (authViewResult == .completed ? "successfully" : "unsuccessfully...") + " for URL " + urlString);
+        print("Invokign Unity callback");
+        handler(authViewResult.rawValue, NSString(string: resultURL?.absoluteString ?? "").utf8String!);
+    }
 }

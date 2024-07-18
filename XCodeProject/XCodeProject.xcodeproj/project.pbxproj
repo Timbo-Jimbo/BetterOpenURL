@@ -123,8 +123,8 @@
 		F2C5C8352C461DFA009E87DB /* BetterOpenURL */ = {
 			isa = PBXGroup;
 			children = (
-				F2B619D62C44D0C300FC42FC /* BetterOpenURL.swift */,
 				F2B619F52C44DEE800FC42FC /* UIColorExt.swift */,
+				F2B619D62C44D0C300FC42FC /* BetterOpenURL.swift */,
 				F2C5C83F2C461E97009E87DB /* BetterOpenURLBridging.swift */,
 			);
 			path = BetterOpenURL;

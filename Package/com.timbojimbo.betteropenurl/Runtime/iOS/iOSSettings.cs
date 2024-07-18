@@ -15,5 +15,6 @@ namespace TimboJimbo.BetterOpenURL.iOS
         public iOSTransitionStyle TransitionStyle = iOSTransitionStyle.CoverOver;
         public iOSPresentationStyle PresentationStyle = iOSPresentationStyle.FullScreen;
         public iOSDismissButtonStyle DismissButtonStyle = iOSDismissButtonStyle.Done;
+        public string AuthSchema = "https";
     }
 }

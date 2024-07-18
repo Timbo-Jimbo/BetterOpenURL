@@ -23,7 +23,7 @@ class BetterOpenURL {
 
             val customTabsBuilder = CustomTabsIntent.Builder()
                 .setShowTitle(showTitle)
-                .setUrlBarHidingEnabled(urlBarHidingEnabled);
+                .setUrlBarHidingEnabled(urlBarHidingEnabled)
 
             if(customAnimations)
             {

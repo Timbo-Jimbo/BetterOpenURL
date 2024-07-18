@@ -6,13 +6,21 @@
 //
 
 import SafariServices
+import AuthenticationServices;
 
-    
-public func supportsSafariView() -> Bool {
+internal enum AuthViewResult : Int
+{
+    case completed = 0
+    case failed = 1
+}
+
+internal typealias AuthCompletionHandler = (AuthViewResult, URL?) -> Void
+
+internal func supportsSafariView() -> Bool {
     return getTopViewController() != nil;
 }
 
-public func openSafariView(
+internal func openSafariView(
     url: String,
     customColor: Bool = false,
     barTintColor: UIColor = UIColor(),
@@ -21,7 +29,8 @@ public func openSafariView(
     barCollapsingEnabled: Bool = true,
     dismissButtonStyle: SFSafariViewController.DismissButtonStyle = .done
 ) {
-            
+    print("openSafariView called for URL " + url);
+    
     guard let parsedUrl = URL(string: url) else { return };
     
     if let topController = getTopViewController() {
@@ -40,17 +49,89 @@ public func openSafariView(
         vc.dismissButtonStyle = dismissButtonStyle;
         
         
+        print("openSafariView presenting SFSafariViewController");
         topController.present(vc, animated: true);
+    }
+    else
+    {
+        print("openSafariView unable to locate top view controller, so we wont be able to show SafariView..!");
     }
 }
 
+internal func startAuthentication(
+    url: String,
+    callbackUrlSchema: String,
+    completionHandler: @escaping AuthCompletionHandler
+) {
+    if(ContextProvider.activeSessionHandle != nil)
+    {
+        print("startAuthentication called but we already have an active ASWebAuthenticationSession...? This will probably cause the other session to close.");
+        ContextProvider.activeSessionHandle = nil;
+    }
+    
+    print("startAuthentication called for URL " + url + " with Callback Schema set to " + callbackUrlSchema);
+    
+    // Use the URL and callback scheme specified by the authorization provider.
+    guard let authURL = URL(string: url) else { return }
 
-private func getTopViewController() -> UIViewController? {
-    guard let window = UIApplication.shared.connectedScenes
+    // Initialize the session.
+    let session = ASWebAuthenticationSession(url: authURL, callbackURLScheme: callbackUrlSchema)
+    { callbackURL, error in
+        print("ASWebAuthenticationSession completion handler was called");
+        if(error != nil)
+        {
+            print("ASWebAuthenticationSession completion handler was called with an error..!");
+            print(error?.localizedDescription as Any);
+            completionHandler(.failed, callbackURL);
+        }
+        else
+        {
+            print("ASWebAuthenticationSession completion handler was called");
+            completionHandler(.completed, callbackURL);
+        }
+        
+        ContextProvider.activeSessionHandle = nil;
+    }
+    
+    session.presentationContextProvider = ContextProvider.instance;
+    
+    let started = session.start();
+    
+    if(!started)
+    {
+        print("Was not able to start ASWebAuthenticationSession...");
+        completionHandler(.failed, nil)
+    }
+    else
+    {
+        print("ASWebAuthenticationSession session started!");
+        
+        //We need to hold on to the instance so it doesnt get deallocated immedeately
+        ContextProvider.activeSessionHandle = session;
+    }
+}
+
+private class ContextProvider : NSObject, ASWebAuthenticationPresentationContextProviding {
+    
+    static var activeSessionHandle:ASWebAuthenticationSession? = nil;
+    static let instance: ContextProvider = ContextProvider();
+    
+    @available(iOS 13.0, *)
+    func presentationAnchor(for session: ASWebAuthenticationSession) -> ASPresentationAnchor {
+        return getTopWindow()!;
+    }
+}
+
+private func getTopWindow() -> UIWindow? {
+    return UIApplication.shared.connectedScenes
         .filter({ $0.activationState == .foregroundActive })
         .compactMap({ $0 as? UIWindowScene })
         .first?.windows
         .filter({ $0.isKeyWindow }).first
+}
+
+private func getTopViewController() -> UIViewController? {
+    guard let window = getTopWindow()
     else
     {
         return nil
@@ -63,4 +144,3 @@ private func getTopViewController() -> UIViewController? {
 
     return topController
 }
-

@@ -1,6 +1,7 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
-// swift-module-flags: -target x86_64-apple-ios17.5-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -enable-bare-slash-regex -module-name BetterOpenURL
+// swift-module-flags: -target arm64-apple-ios17.5 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name BetterOpenURL
+import AuthenticationServices
 import Foundation
 import SafariServices
 import Swift
@@ -12,5 +13,5 @@ import _SwiftConcurrencyShims
 public func BetterOpenURL_supportsSafariView() -> Swift.Bool
 @_cdecl("BetterOpenURL_openSafariView")
 public func BetterOpenURL_openSafariView(url: Swift.UnsafePointer<Swift.CChar>, customColor: Swift.Bool, barTintColorHex: Swift.UnsafePointer<Swift.CChar>, modalTransitionStyle: Swift.Int, modalPresentationStyle: Swift.Int, barCollapsingEnabled: Swift.Bool, dismissButtonStyle: Swift.Int)
-public func supportsSafariView() -> Swift.Bool
-public func openSafariView(url: Swift.String, customColor: Swift.Bool = false, barTintColor: UIKit.UIColor = UIColor(), modalTransitionStyle: UIKit.UIModalTransitionStyle = .coverVertical, modalPresentationStyle: UIKit.UIModalPresentationStyle = .fullScreen, barCollapsingEnabled: Swift.Bool = true, dismissButtonStyle: SafariServices.SFSafariViewController.DismissButtonStyle = .done)
+@_cdecl("BetterOpenURL_startAuthentication")
+public func BetterOpenURL_startAuthentication(url: Swift.UnsafePointer<Swift.CChar>, callbackUrlSchema: Swift.UnsafePointer<Swift.CChar>, handler: @convention(c) (Swift.Int, Swift.UnsafePointer<Swift.CChar>) -> Swift.Void)

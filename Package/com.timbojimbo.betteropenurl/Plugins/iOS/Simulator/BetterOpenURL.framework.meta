@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7e6344bd801524f98a37b34fdf73b4fb
+guid: 20ac21fc554cf4daeafbcdf059535766
 PluginImporter:
   externalObjects: {}
   serializedVersion: 2
@@ -72,7 +72,7 @@ PluginImporter:
       enabled: 1
       settings:
         AddToEmbeddedBinaries: true
-        CPU: ARM64
+        CPU: X64
         CompileFlags: 
         FrameworkDependencies: AuthenticationServices;SafariServices;
   userData: 

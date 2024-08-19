@@ -6,31 +6,31 @@
 	<dict>
 		<key>Info.plist</key>
 		<data>
-		QwzmAXVGrtvg42pKYsSAxCMQnHQ=
+		w24PVgYTJ5/S2/BDB2jRiBU1riY=
 		</data>
 		<key>Modules/BetterOpenURL.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		8dLhe9TeiaupU7SnaljicfCCluY=
+		fqX0T+1957Zk5tAoWHab2BFWSqo=
 		</data>
 		<key>Modules/BetterOpenURL.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		yuHApRokGW32754QhstJZSK2aiY=
+		y43it79gdSnIhx3PiSAM8lSxUwo=
 		</data>
 		<key>Modules/BetterOpenURL.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		qvtX0phsSP3vI9Z5xFdgvAwM98Q=
+		J/3WKbHAmp32ZnOZpzcIX4M2FGM=
 		</data>
 		<key>Modules/BetterOpenURL.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		6H0ALaGZvIXGDHQnNqWf8Y1wXOo=
+		fCRJtSg7xDt2+NwjaeDVjRFHVoE=
 		</data>
 		<key>Modules/BetterOpenURL.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		qvtX0phsSP3vI9Z5xFdgvAwM98Q=
+		J/3WKbHAmp32ZnOZpzcIX4M2FGM=
 		</data>
 		<key>Modules/BetterOpenURL.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		ygp7dfEfzRSbRuzlsaTgKZU7AYo=
+		BV3zB9a7YhSi5LvG2CTf+4ke5Cc=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -39,42 +39,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			0Tt2kcTxUbWYiNW7KYjf2uBzQlpQauUz3/2k74yu/90=
+			n9HxRa2GMoHzv9h4P2dqXYTZLDfGj2aZaAuysAVXVN8=
 			</data>
 		</dict>
 		<key>Modules/BetterOpenURL.swiftmodule/arm64-apple-ios.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			tFu0JQFoaT0OMOHd19dTzN4HIgvzXgwSJrhm90O7PDw=
+			YaKL7uni0NRwgywU6QDrJXXw55wNe+L6/jULQdFamuE=
 			</data>
 		</dict>
 		<key>Modules/BetterOpenURL.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			uI8enR3aP4LKx8Ce1pPI2Kyz0oAn9vfjqpZRMgA41bY=
+			cdMvLCsXcCUPHq7ntRxgzJ29EDUBwPgZd7x+fRHJIdY=
 			</data>
 		</dict>
 		<key>Modules/BetterOpenURL.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			rsrWlwj8GnVuCk27sY2lCX0KXdQtOf82t8VdPb0OBUQ=
+			6tkTZlGfyblCF19SByswWw3PbtpFIPapLlmtOOlRS6M=
 			</data>
 		</dict>
 		<key>Modules/BetterOpenURL.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			uI8enR3aP4LKx8Ce1pPI2Kyz0oAn9vfjqpZRMgA41bY=
+			cdMvLCsXcCUPHq7ntRxgzJ29EDUBwPgZd7x+fRHJIdY=
 			</data>
 		</dict>
 		<key>Modules/BetterOpenURL.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			gjq8CO+OV93IRGcUQOqNcmYb685MfAhLDvxtfla/BpU=
+			JhKyibpL82g0nongwkvKMTUXOqMpNAzfATGgdUqhbAM=
 			</data>
 		</dict>
 	</dict>

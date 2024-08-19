@@ -1,6 +1,6 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
-// swift-module-flags: -target x86_64-apple-ios17.5-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name BetterOpenURL
+// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name BetterOpenURL
 import AuthenticationServices
 import Foundation
 import SafariServices
@@ -15,3 +15,19 @@ public func BetterOpenURL_supportsSafariView() -> Swift.Bool
 public func BetterOpenURL_openSafariView(url: Swift.UnsafePointer<Swift.CChar>, customColor: Swift.Bool, barTintColorHex: Swift.UnsafePointer<Swift.CChar>, modalTransitionStyle: Swift.Int, modalPresentationStyle: Swift.Int, barCollapsingEnabled: Swift.Bool, dismissButtonStyle: Swift.Int)
 @_cdecl("BetterOpenURL_startAuthentication")
 public func BetterOpenURL_startAuthentication(url: Swift.UnsafePointer<Swift.CChar>, callbackUrlSchema: Swift.UnsafePointer<Swift.CChar>, handler: @convention(c) (Swift.Int, Swift.UnsafePointer<Swift.CChar>) -> Swift.Void)
+public enum AuthViewResult : Swift.Int {
+  case completed
+  case failed
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public typealias AuthCompletionHandler = (BetterOpenURL.AuthViewResult, Foundation.URL?) -> Swift.Void
+public func supportsSafariView() -> Swift.Bool
+public func openSafariView(url: Swift.String, customColor: Swift.Bool = false, barTintColor: UIKit.UIColor = UIColor(), modalTransitionStyle: UIKit.UIModalTransitionStyle = .coverVertical, modalPresentationStyle: UIKit.UIModalPresentationStyle = .fullScreen, barCollapsingEnabled: Swift.Bool = true, dismissButtonStyle: SafariServices.SFSafariViewController.DismissButtonStyle = .done)
+public func startAuthentication(url: Swift.String, callbackUrlSchema: Swift.String, completionHandler: @escaping BetterOpenURL.AuthCompletionHandler)
+extension BetterOpenURL.AuthViewResult : Swift.Equatable {}
+extension BetterOpenURL.AuthViewResult : Swift.Hashable {}
+extension BetterOpenURL.AuthViewResult : Swift.RawRepresentable {}

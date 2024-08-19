@@ -235,6 +235,365 @@
         "moduleName": "BetterOpenURL"
       },
       {
+        "kind": "TypeDecl",
+        "name": "AuthViewResult",
+        "printedName": "AuthViewResult",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "completed",
+            "printedName": "completed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(BetterOpenURL.AuthViewResult.Type) -> BetterOpenURL.AuthViewResult",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AuthViewResult",
+                    "printedName": "BetterOpenURL.AuthViewResult",
+                    "usr": "s:13BetterOpenURL14AuthViewResultO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "BetterOpenURL.AuthViewResult.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AuthViewResult",
+                        "printedName": "BetterOpenURL.AuthViewResult",
+                        "usr": "s:13BetterOpenURL14AuthViewResultO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13BetterOpenURL14AuthViewResultO9completedyA2CmF",
+            "mangledName": "$s13BetterOpenURL14AuthViewResultO9completedyA2CmF",
+            "moduleName": "BetterOpenURL"
+          },
+          {
+            "kind": "Var",
+            "name": "failed",
+            "printedName": "failed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(BetterOpenURL.AuthViewResult.Type) -> BetterOpenURL.AuthViewResult",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AuthViewResult",
+                    "printedName": "BetterOpenURL.AuthViewResult",
+                    "usr": "s:13BetterOpenURL14AuthViewResultO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "BetterOpenURL.AuthViewResult.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AuthViewResult",
+                        "printedName": "BetterOpenURL.AuthViewResult",
+                        "usr": "s:13BetterOpenURL14AuthViewResultO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13BetterOpenURL14AuthViewResultO6failedyA2CmF",
+            "mangledName": "$s13BetterOpenURL14AuthViewResultO6failedyA2CmF",
+            "moduleName": "BetterOpenURL"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "BetterOpenURL.AuthViewResult?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AuthViewResult",
+                    "printedName": "BetterOpenURL.AuthViewResult",
+                    "usr": "s:13BetterOpenURL14AuthViewResultO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:13BetterOpenURL14AuthViewResultO8rawValueACSgSi_tcfc",
+            "mangledName": "$s13BetterOpenURL14AuthViewResultO8rawValueACSgSi_tcfc",
+            "moduleName": "BetterOpenURL",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13BetterOpenURL14AuthViewResultO8rawValueSivp",
+            "mangledName": "$s13BetterOpenURL14AuthViewResultO8rawValueSivp",
+            "moduleName": "BetterOpenURL",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13BetterOpenURL14AuthViewResultO8rawValueSivg",
+                "mangledName": "$s13BetterOpenURL14AuthViewResultO8rawValueSivg",
+                "moduleName": "BetterOpenURL",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:13BetterOpenURL14AuthViewResultO",
+        "mangledName": "$s13BetterOpenURL14AuthViewResultO",
+        "moduleName": "BetterOpenURL",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "enumRawTypeName": "Int",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      },
+      {
+        "kind": "Function",
+        "name": "supportsSafariView",
+        "printedName": "supportsSafariView()",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "Bool",
+            "printedName": "Swift.Bool",
+            "usr": "s:Sb"
+          }
+        ],
+        "declKind": "Func",
+        "usr": "s:13BetterOpenURL18supportsSafariViewSbyF",
+        "mangledName": "$s13BetterOpenURL18supportsSafariViewSbyF",
+        "moduleName": "BetterOpenURL",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "funcSelfKind": "NonMutating"
+      },
+      {
+        "kind": "Function",
+        "name": "openSafariView",
+        "printedName": "openSafariView(url:customColor:barTintColor:modalTransitionStyle:modalPresentationStyle:barCollapsingEnabled:dismissButtonStyle:)",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "Void",
+            "printedName": "()"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "String",
+            "printedName": "Swift.String",
+            "usr": "s:SS"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "Bool",
+            "printedName": "Swift.Bool",
+            "hasDefaultArg": true,
+            "usr": "s:Sb"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "UIColor",
+            "printedName": "UIKit.UIColor",
+            "hasDefaultArg": true,
+            "usr": "c:objc(cs)UIColor"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "UIModalTransitionStyle",
+            "printedName": "UIKit.UIModalTransitionStyle",
+            "hasDefaultArg": true,
+            "usr": "c:@E@UIModalTransitionStyle"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "UIModalPresentationStyle",
+            "printedName": "UIKit.UIModalPresentationStyle",
+            "hasDefaultArg": true,
+            "usr": "c:@E@UIModalPresentationStyle"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "Bool",
+            "printedName": "Swift.Bool",
+            "hasDefaultArg": true,
+            "usr": "s:Sb"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "DismissButtonStyle",
+            "printedName": "SafariServices.SFSafariViewController.DismissButtonStyle",
+            "hasDefaultArg": true,
+            "usr": "c:@E@SFSafariViewControllerDismissButtonStyle"
+          }
+        ],
+        "declKind": "Func",
+        "usr": "s:13BetterOpenURL14openSafariView3url11customColor07barTintI020modalTransitionStyle0l12PresentationN00J17CollapsingEnabled013dismissButtonN0ySS_SbSo7UIColorCSo07UIModalmN0VSo0uoN0VSbSo08SFSafarif17ControllerDismisssN0VtF",
+        "mangledName": "$s13BetterOpenURL14openSafariView3url11customColor07barTintI020modalTransitionStyle0l12PresentationN00J17CollapsingEnabled013dismissButtonN0ySS_SbSo7UIColorCSo07UIModalmN0VSo0uoN0VSbSo08SFSafarif17ControllerDismisssN0VtF",
+        "moduleName": "BetterOpenURL",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "funcSelfKind": "NonMutating"
+      },
+      {
+        "kind": "Function",
+        "name": "startAuthentication",
+        "printedName": "startAuthentication(url:callbackUrlSchema:completionHandler:)",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "Void",
+            "printedName": "()"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "String",
+            "printedName": "Swift.String",
+            "usr": "s:SS"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "String",
+            "printedName": "Swift.String",
+            "usr": "s:SS"
+          },
+          {
+            "kind": "TypeFunc",
+            "name": "Function",
+            "printedName": "(BetterOpenURL.AuthViewResult, Foundation.URL?) -> ()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Tuple",
+                "printedName": "(BetterOpenURL.AuthViewResult, Foundation.URL?)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AuthViewResult",
+                    "printedName": "BetterOpenURL.AuthViewResult",
+                    "usr": "s:13BetterOpenURL14AuthViewResultO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.URL?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "URL",
+                        "printedName": "Foundation.URL",
+                        "usr": "s:10Foundation3URLV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "declKind": "Func",
+        "usr": "s:13BetterOpenURL19startAuthentication3url17callbackUrlSchema17completionHandlerySS_SSyAA14AuthViewResultO_10Foundation0C0VSgtctF",
+        "mangledName": "$s13BetterOpenURL19startAuthentication3url17callbackUrlSchema17completionHandlerySS_SSyAA14AuthViewResultO_10Foundation0C0VSgtctF",
+        "moduleName": "BetterOpenURL",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "funcSelfKind": "NonMutating"
+      },
+      {
         "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
@@ -251,56 +610,56 @@
     {
       "filePath": "\/Users\/timbojimbo\/BetterOpenURL\/XCodeProject\/BetterOpenURL\/BetterOpenURL.swift",
       "kind": "IntegerLiteral",
-      "offset": 205,
+      "offset": 203,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/timbojimbo\/BetterOpenURL\/XCodeProject\/BetterOpenURL\/BetterOpenURL.swift",
       "kind": "IntegerLiteral",
-      "offset": 225,
+      "offset": 223,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/timbojimbo\/BetterOpenURL\/XCodeProject\/BetterOpenURL\/BetterOpenURL.swift",
       "kind": "IntegerLiteral",
-      "offset": 205,
+      "offset": 203,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/timbojimbo\/BetterOpenURL\/XCodeProject\/BetterOpenURL\/BetterOpenURL.swift",
       "kind": "IntegerLiteral",
-      "offset": 225,
+      "offset": 223,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/timbojimbo\/BetterOpenURL\/XCodeProject\/BetterOpenURL\/BetterOpenURL.swift",
       "kind": "IntegerLiteral",
-      "offset": 205,
+      "offset": 203,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/timbojimbo\/BetterOpenURL\/XCodeProject\/BetterOpenURL\/BetterOpenURL.swift",
       "kind": "IntegerLiteral",
-      "offset": 225,
+      "offset": 223,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/timbojimbo\/BetterOpenURL\/XCodeProject\/BetterOpenURL\/BetterOpenURL.swift",
       "kind": "BooleanLiteral",
-      "offset": 466,
+      "offset": 458,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/timbojimbo\/BetterOpenURL\/XCodeProject\/BetterOpenURL\/BetterOpenURL.swift",
       "kind": "BooleanLiteral",
-      "offset": 680,
+      "offset": 672,
       "length": 4,
       "value": "true"
     }

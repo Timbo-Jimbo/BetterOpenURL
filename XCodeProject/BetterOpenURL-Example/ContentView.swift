@@ -89,7 +89,7 @@ struct ContentView: View {
             ColorPicker("Tint Color", selection: $barTintColor, supportsOpacity: false)
             Button(
                 action: {
-                    BetterOpenURL.openSafariView(
+                    openSafariView(
                         url: "https://google.com",
                         customColor: true,
                         barTintColor: UIColor(barTintColor),

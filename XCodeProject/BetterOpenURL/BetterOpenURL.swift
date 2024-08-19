@@ -8,19 +8,19 @@
 import SafariServices
 import AuthenticationServices;
 
-internal enum AuthViewResult : Int
+public enum AuthViewResult : Int
 {
     case completed = 0
     case failed = 1
 }
 
-internal typealias AuthCompletionHandler = (AuthViewResult, URL?) -> Void
+public typealias AuthCompletionHandler = (AuthViewResult, URL?) -> Void
 
-internal func supportsSafariView() -> Bool {
+public func supportsSafariView() -> Bool {
     return getTopViewController() != nil;
 }
 
-internal func openSafariView(
+public func openSafariView(
     url: String,
     customColor: Bool = false,
     barTintColor: UIColor = UIColor(),
@@ -58,7 +58,7 @@ internal func openSafariView(
     }
 }
 
-internal func startAuthentication(
+public func startAuthentication(
     url: String,
     callbackUrlSchema: String,
     completionHandler: @escaping AuthCompletionHandler

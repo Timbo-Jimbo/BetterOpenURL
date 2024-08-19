@@ -24,6 +24,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		F263ED9B2C72E11A005D9ED3 /* BetterOpenURL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2C5C8342C461DFA009E87DB /* BetterOpenURL.framework */; };
+		F263ED9C2C72E11A005D9ED3 /* BetterOpenURL.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F2C5C8342C461DFA009E87DB /* BetterOpenURL.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F2B619E22C44D0DA00FC42FC /* BetterOpenURL_ExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B619E12C44D0DA00FC42FC /* BetterOpenURL_ExampleApp.swift */; };
 		F2B619E42C44D0DA00FC42FC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B619E32C44D0DA00FC42FC /* ContentView.swift */; };
 		F2B619E62C44D0DB00FC42FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2B619E52C44D0DB00FC42FC /* Assets.xcassets */; };
@@ -34,6 +36,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		F263ED9D2C72E11A005D9ED3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2B619C92C44D05B00FC42FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F2C5C8332C461DFA009E87DB;
+			remoteInfo = BetterOpenURL;
+		};
 		F2C5C83D2C461E12009E87DB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F2B619C92C44D05B00FC42FC /* Project object */;
@@ -42,6 +51,20 @@
 			remoteInfo = BetterOpenURL;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F263ED9F2C72E11A005D9ED3 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F263ED9C2C72E11A005D9ED3 /* BetterOpenURL.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		F2B619D62C44D0C300FC42FC /* BetterOpenURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterOpenURL.swift; sourceTree = "<group>"; };
@@ -61,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F263ED9B2C72E11A005D9ED3 /* BetterOpenURL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,11 +174,13 @@
 				F2B619DB2C44D0DA00FC42FC /* Sources */,
 				F2B619DC2C44D0DA00FC42FC /* Frameworks */,
 				F2B619DD2C44D0DA00FC42FC /* Resources */,
+				F263ED9F2C72E11A005D9ED3 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				F2C5C83E2C461E12009E87DB /* PBXTargetDependency */,
+				F263ED9E2C72E11A005D9ED3 /* PBXTargetDependency */,
 			);
 			name = "BetterOpenURL-Example";
 			productName = "BetterOpenURL-Example";
@@ -341,6 +367,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		F263ED9E2C72E11A005D9ED3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F2C5C8332C461DFA009E87DB /* BetterOpenURL */;
+			targetProxy = F263ED9D2C72E11A005D9ED3 /* PBXContainerItemProxy */;
+		};
 		F2C5C83E2C461E12009E87DB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F2C5C8332C461DFA009E87DB /* BetterOpenURL */;
@@ -450,7 +481,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -530,7 +561,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -616,7 +647,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -706,7 +737,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

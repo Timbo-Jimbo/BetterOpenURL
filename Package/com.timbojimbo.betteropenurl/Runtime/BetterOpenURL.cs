@@ -19,45 +19,54 @@ namespace TimboJimbo.BetterOpenURL
         public void Open(string url)
         {
             Log($"Opening URL: {url}");
-            
-            #if UNITY_ANDROID
-            if (!Application.isEditor && Application.platform == RuntimePlatform.Android)
-            {
-                Log("Platform is Android");
 
-                if(AndroidBindings.HasCustomTabsSupport())
+            try
+            {
+                #if UNITY_ANDROID
+                if (!Application.isEditor && Application.platform == RuntimePlatform.Android)
                 {
-                    Log("Custom Tabs supported, opening URL with custom tabs");
-                    AndroidBindings.OpenInCustomTab(url, AndroidSettings.CustomToolbarColors, AndroidSettings.ToolbarColor, AndroidSettings.ToolbarSecondaryColor, AndroidSettings.ShowTitle, AndroidSettings.UrlBarHidingEnabled, AndroidSettings.CustomAnimations, AndroidSettings.ApplicationAnimation, AndroidSettings.CustomTabAnimation);
+                    Log("Platform is Android");
+
+                    if(AndroidBindings.HasCustomTabsSupport())
+                    {
+                        Log("Custom Tabs supported, opening URL with custom tabs");
+                        AndroidBindings.OpenInCustomTab(url, AndroidSettings.CustomToolbarColors, AndroidSettings.ToolbarColor, AndroidSettings.ToolbarSecondaryColor, AndroidSettings.ShowTitle, AndroidSettings.UrlBarHidingEnabled, AndroidSettings.CustomAnimations, AndroidSettings.ApplicationAnimation, AndroidSettings.CustomTabAnimation);
+                    }
+                    else
+                    {
+                        Log("Custom Tabs not supported, falling back to default behavior"); 
+                        Application.OpenURL(url);
+                    }
                 }
                 else
+                #endif
+                #if UNITY_IOS
+                if (!Application.isEditor && (Application.platform == RuntimePlatform.IPhonePlayer || Application.platform == RuntimePlatform.OSXPlayer))
                 {
-                    Log("Custom Tabs not supported, falling back to default behavior"); 
+                    Log("Platform is iOS");
+                    
+                    if(iOSBindings.SupportsSafariView())
+                    {
+                        Log("Safari View supported, opening URL with Safari View");
+                        iOSBindings.OpenSafariView(url, iOSSettings.CustomColor, iOSSettings.BarTintColor, iOSSettings.TransitionStyle, iOSSettings.PresentationStyle, iOSSettings.BarCollapsingEnabled, iOSSettings.DismissButtonStyle);
+                    }
+                    else
+                    {
+                        Log("Safari View not supported, falling back to default behavior");
+                        Application.OpenURL(url);
+                    }
+                }
+                else
+                #endif
+                {
+                    Log("Platform neither Android nor iOS, falling back to default behavior");
                     Application.OpenURL(url);
                 }
             }
-            else
-            #endif
-            #if UNITY_IOS
-            if (!Application.isEditor && (Application.platform == RuntimePlatform.IPhonePlayer || Application.platform == RuntimePlatform.OSXPlayer))
+            catch (Exception e)
             {
-                Log("Platform is iOS");
-                
-                if(iOSBindings.SupportsSafariView())
-                {
-                    Log("Safari View supported, opening URL with Safari View");
-                    iOSBindings.OpenSafariView(url, iOSSettings.CustomColor, iOSSettings.BarTintColor, iOSSettings.TransitionStyle, iOSSettings.PresentationStyle, iOSSettings.BarCollapsingEnabled, iOSSettings.DismissButtonStyle);
-                }
-                else
-                {
-                    Log("Safari View not supported, falling back to default behavior");
-                    Application.OpenURL(url);
-                }
-            }
-            else
-            #endif
-            {
-                Log("Platform neither Android nor iOS, falling back to default behavior");
+                Log("Failed to open URL with exception:" + e);
+                Log("Falling back to Application.OpenURL");
                 Application.OpenURL(url);
             }
         }

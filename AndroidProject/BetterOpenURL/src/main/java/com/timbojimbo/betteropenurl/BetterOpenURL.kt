@@ -3,6 +3,7 @@ package com.timbojimbo.betteropenurl
 import android.content.Context
 import android.graphics.Color
 import android.net.Uri
+import android.webkit.URLUtil
 import androidx.browser.customtabs.CustomTabColorSchemeParams
 import androidx.browser.customtabs.CustomTabsClient
 import androidx.browser.customtabs.CustomTabsIntent
@@ -20,6 +21,14 @@ class BetterOpenURL {
                 System.err.println("This device does not support Custom Tabs - you can call hasCustomTabsSupport to check if it is supported first!")
                 return
             }
+
+            val guessedUrlToLaunch = URLUtil.guessUrl(urlToLaunch);
+            if(guessedUrlToLaunch != urlToLaunch)
+            {
+                println("GuessUrl changed the UrlToLaunch from $urlToLaunch to $guessedUrlToLaunch");
+            }
+
+            val uri = Uri.parse(guessedUrlToLaunch);
 
             val customTabsBuilder = CustomTabsIntent.Builder()
                 .setShowTitle(showTitle)
@@ -49,7 +58,7 @@ class BetterOpenURL {
                 customTabsBuilder.setDefaultColorSchemeParams(defaultColorSchema)
             }
 
-            customTabsBuilder.build().launchUrl(context, Uri.parse(urlToLaunch))
+            customTabsBuilder.build().launchUrl(context, uri)
         }
 
         @JvmStatic
@@ -70,11 +79,6 @@ class BetterOpenURL {
                 println("No browsers on this device support Custom Tabs!")
                 return false
             }
-        }
-
-        @JvmStatic
-        fun testLog() {
-            println("This is a test...!!!");
         }
     }
 }
